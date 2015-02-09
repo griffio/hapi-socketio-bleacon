@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Hapi Socket.io Bleacon</title>
+    </head>
+    <body>
+        <div class="container" id="container"/>
+        <script id="template" type="text/ractive">
+                <ul>
+                    {{#beacons}}
+                        <li>{{.uuid}}[{{.major}}][{{.minor}}][{{.measuredPower}}][{{.rssi}}]</li>
+                    {{/if}}
+                </ul>
+        </script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="http://cdn.ractivejs.org/latest/ractive.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>

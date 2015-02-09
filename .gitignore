@@ -1,0 +1,7 @@
+.idea/
+node_modules/
+bin/
+lib/
+include/
+*.log
+*.iml
