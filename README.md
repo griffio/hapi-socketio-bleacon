@@ -1,8 +1,8 @@
-Initial Beacon app with socket.io
+Initial Beacon app with socket.io, ReactJs and Browserify.
 
 ### Requirements on Linux
 
-python 2
+virtualenv -p python2
 
 ~~~
 sudo find -path '*bleno*Release/hci-ble' -exec sudo setcap cap_net_raw+eip '{}' \;
@@ -17,6 +17,7 @@ var Bacon = require("baconjs").Bacon;
 
 ~~~
 npm install
+npm build
 npm start
 ~~~
 
