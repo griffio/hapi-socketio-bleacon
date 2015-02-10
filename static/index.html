@@ -3,11 +3,11 @@
         <title>Hapi Socket.io Bleacon</title>
     </head>
     <body>
-        <div class="container" id="container"/>
+        <div class="container" id="container"></div>
         <script id="template" type="text/ractive">
                 <ul>
                     {{#beacons}}
-                        <li>{{.uuid}}[{{.major}}][{{.minor}}][{{.measuredPower}}][{{.rssi}}]</li>
+                        <li>{{.uuid}}[{{.major}}][{{.minor}}][{{.measuredPower}}][{{.rssi}}][{{.proximity}}]</li>
                     {{/if}}
                 </ul>
         </script>
