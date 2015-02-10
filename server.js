@@ -28,11 +28,11 @@ io.sockets.on("connection", function(socket) {
 });
 
 server.route({
-    path: "/{static*}",
+    path: "/{client*}",
     method: "get",
     handler: {
         directory: {
-            path: "./static"
+            path: "./client"
         }
     }
 });
