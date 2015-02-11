@@ -1,14 +1,26 @@
 var React = require('react');
 
+var BeaconListItem = React.createClass({
+   render: function () {
+    var beacon = this.props.beacon; 
+        return
+        (<li>[{beacon.proximity}]{beacon.uuid}[{beacon.major}/{beacon.minor}]</li>);
+   
+   }
+});
+
 var BeaconList = React.createClass({
     render: function () {
+        
+         return (
+               <ul>
+                   {this.props.beacons.map(function(beacon, idx) {
+                      return <BeaconListItem key={idx} beacon={beacon}/>;
+                   })};
+               </ul>
+               );
+   }
 
-        var renderBeacon = function (beacon) {
-            return <li>[{beacon.proximity}]{beacon.uuid}[{beacon.major}/{beacon.minor}]</li>;
-        };
-
-        return (<ul>{this.props.beacons.map(renderBeacon)} </ul>)
-    }
 });
 
 var BeaconApp = React.createClass({
@@ -38,7 +50,7 @@ var BeaconApp = React.createClass({
     },
 
     render: function () {
-        return (<ul><BeaconList beacons={this.state.beacons}/></ul>);
+        return (<BeaconList beacons={this.state.beacons}/>);
     }
 
 });
